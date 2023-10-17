@@ -1,19 +1,13 @@
-const express = require('express');
-const app = express();
+// const express = require('express');
+// const app = express();
+// const cookieParser = require('cookie-parser')
 
-const dotenv = require('dotenv')
+// const dotenv = require('dotenv')
+// dotenv.config({path:"./config/config.env"})
 
-//-----------using middleware------------
-app.use(express.json());
-app.use(express.urlencoded({ extended: true}));
 
-// ---------importing routes-----------
-const post = require('./routes/post');
-const user = require('./routes/user');
 
-// --------using routes---------
-app.use('/api/v1', post);
-app.use('/api/v1', user);
 
-dotenv.config({path:"./config/config.env"})
+
+
 module.exports = app;
